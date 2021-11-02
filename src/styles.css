@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    heigh:665px;
+    background-image: url(./app/awa.jpg);
+    background-size: auto;
+    opacity: 80;
+    
+  }

@@ -1,0 +1,31 @@
+
+  <div class="d-flex justify-content-center">
+    <div class="col-6">
+      <input type="text" class="form-control mt-5 bg-info" placeholder="buscar producto"
+      (input) = "handlerInput($event)"/>
+      <div class="d-grid gap-2">
+      <button type="button" class="btn btn-secondary"
+      (click)= "submitButton()">
+          buscar
+      </button>
+      </div>
+      <div class= "d-flex align-items-center">
+      <table class="table table bg-dark text-white">
+        <thead>
+          <tr>
+              <th>id</th>
+              <th>nombre</th>
+              <th>precio</th>
+          </tr>
+        </thead>
+      <tbody>
+        <tr *ngFor="let producto of mostrarProductos">
+          <td>{{producto.id}}</td>
+          <td>{{producto.name}}</td>
+          <td>{{producto.precio}}</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+    </div>
+  </div>
