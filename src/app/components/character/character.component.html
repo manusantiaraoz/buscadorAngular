@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4 mt-3" >
+            <div class="card text-white bg-dark" *ngFor="let character of character">
+                <img src="{{character.img}}" class="img-thumbnail" alt="not image">
+                <div class="card-body">
+                  <h5 class="card-title">{{character.name}}</h5>
+                  <p class="card-text">Nick: {{character.nickname}}</p>
+                </div>
+                <ul class="list-group list-group-flush ">
+                  <li class="list-group-item bg-secondary">occupation: {{character.occupation}}</li>
+                  <li class="list-group-item bg-secondary">birthday: {{character.birthday}}</li>
+                  <li class="list-group-item bg-danger">status: {{character.status}}</li>
+                </ul>
+                <a href="/characters"  class="btn btn-dark text-white">volver</a>
+              </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4 mt-3" *ngFor="let character of characters">
+            <div class="card text-white bg-dark">
+                <img src="{{character.img}}" class="img-thumbnail" alt="not image">
+                <div class="card-body">
+                  <h5 class="card-title">{{character.name}}</h5>
+                  <p class="card-text">Nick: {{character.nickname}}</p>
+                </div>
+                <ul class="list-group list-group-flush ">
+                  <li class="list-group-item bg-secondary">occupation: {{character.occupation}}</li>
+                  <li class="list-group-item bg-secondary">birthday: {{character.birthday}}</li>
+                  <li class="list-group-item bg-danger">status: {{character.status}}</li>
+                </ul>
+                <a routerLink="/characters/{{character.char_id}}"  class="btn btn-dark text-white">mas info</a>
+              </div>
+        </div>
+    </div>
+</div>
