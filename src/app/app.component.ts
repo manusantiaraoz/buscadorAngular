@@ -7,6 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'buscador';
-  ejemplo1:string='';
-  ejemplo2:string=''; 
+  
 }

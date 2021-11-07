@@ -1,6 +1,8 @@
 <div class="container">
     <div class="row">
-        <div class="col-4 mt-3" *ngFor="let character of characters">
+  <!-- lo que hago para que me ande el buscador, es crear primero un input donde pueda ingresar el dato del que busco, despues asocio a un string vacio el buscar declarao tambien en mi component.ts para poder usar el banana model, ademas dentro del ngModel tengo que usar el ngModelChange para que pueda imprimir lo que voy escribiendo en mi funcion mostrar personaje. ademas de que voy a cambiar el llamado de characters al de filterpersonaje, que es la que ma va a mostrar el resultado de la busqueda -->
+      <input type="text" class="form-control mt-5 bg-info" placeholder="buscar personaje" [(ngModel)]="buscar" (ngModelChange)="mostrarPersonaje()"/>
+        <div class="col-4 mt-3" *ngFor="let character of filterpersonaje">
             <div class="card text-white bg-dark">
                 <img src="{{character.img}}" class="img-thumbnail" alt="not image">
                 <div class="card-body">
